@@ -1,0 +1,2 @@
+# newwebsite
+php mysql phpmyadmin 
