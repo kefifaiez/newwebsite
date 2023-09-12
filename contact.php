@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Rediriger vers index.php avec un message de succès
-        header("Location: index.php?success=1");
+        header("Location: index.html?success=1");
         exit(); // Arrêtez l'exécution du script après la redirection
     } else {
         echo "Erreur lors de l'envoi du message : " . $stmt->error;
