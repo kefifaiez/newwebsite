@@ -4,18 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<style>
-        /* Styles pour le message de succès */
-        .success-message {
-            background-color: #4CAF50; /* Couleur de fond verte */
-            color: #fff; /* Couleur du texte blanc */
-            padding: 10px; /* Espacement interne */
-            text-align: center; /* Centrer le texte horizontalement */
-            margin-bottom: 20px; /* Espacement en bas du message */
-            border-radius: 5px; /* Coins arrondis */
-            font-weight: bold; /* Texte en gras */
-        }
-    </style>
     <link rel="stylesheet" href="style.css">
     <!-- boxicons upload logo -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -51,7 +39,7 @@
         <div class="home-content">
             <h3>Salut, c'est moi</h3>
             <h1>Kefi faiez</h1>
-            <h3>je suis <span class="multiple-text"></span></h3>
+            <<h3>je suis <span class="multiple-text"></span></h3>
             <p>Maîtrise avancée de la gestion de réseaux, création immersive en tant que développeur Frontend, et expertise dans l'optimisation des performances grâce aux solutions cloud</p>
             <div class="social-media">
                 <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -217,10 +205,10 @@
 
     <!-- Affichage du message de succès s'il y en a un -->
     <?php
-   if (isset($_GET["success"]) && $_GET["success"] == 1) {
-    echo '<p class="success-message">Message envoyé avec succès!</p>';
-		                                         }
-    ?>
+     /* if (isset($_GET["success"]) && $_GET["success"] == 1) {
+        echo '<p class="success-message">Message envoyé avec succès!</p>';
+    } */
+    ?> 
 
     <!-- ... Footer ... -->
 	

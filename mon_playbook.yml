@@ -1,0 +1,21 @@
+---
+- name: Gérer les conteneurs Docker
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Arrêter et supprimer les conteneurs Docker avec Docker Compose
+      command: docker-compose down
+      ignore_errors: yes
+
+    - name: Supprimer toutes les images Docker (sauf celles de Jenkins)
+      shell: docker images | grep -v 'jenkins' | awk '{print $3}' | xargs docker rmi -f
+      register: image_removal_result
+      ignore_errors: yes
+
+    - name: Afficher le résultat de la suppression des images
+      debug:
+        var: image_removal_result.stdout_lines
+
+    - name: Redémarrer les conteneurs Docker avec Docker Compose
+      command: docker-compose up -d
+      ignore_errors: yes
