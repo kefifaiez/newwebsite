@@ -545,59 +545,76 @@ footer p{
 
 
 /*---------------------- Media query pour les écrans de taille inférieure à 768px (petits écrans) ------------------------*/
+/* Media query pour les écrans de taille inférieure à 900px */
 @media screen and (max-width: 900px) {
-
     .portfolio-container {
-        grid-template-columns: repeat(2, 1fr); /* 3 colonnes pour les écrans de taille moyenne */
+        grid-template-columns: repeat(2, 1fr);
     }
     .header {
         flex-wrap: wrap;
     }
-    .home{
+    .home {
         flex-wrap: wrap;
         margin-top: 50px;
     }
-.home-content{
-    text-align: center;
-}
-
-.home-img
-{
-    display: none;
-
-}
-}
-
-/*----------------------------- Media query pour les écrans de taille inférieure à 780px (très petits écrans) ----------------------*/
-@media screen and (max-width: 780px) {
-    .about{
-flex-wrap: wrap;
+    .home-content {
+        text-align: center;
+    }
+    .home-img {
+        display: none;
     }
 
-.about-content{
-    text-align: center;
+
 }
 
-.about-content h2 {
-    text-align: center;
-}
+/* Media query pour les écrans de taille inférieure à 780px */
+@media screen and (max-width: 780px) {
+    .about {
+        flex-wrap: wrap;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        text-align: center;
+    }
 
     .navbar a {
         font-size: 1.4rem;
-        /* Marge à gauche entre chaque élément de navigation */
         margin-left: 2rem;
     }
-   
+	
+	    /* Ajoutez le style pour "je suis" sur une ligne distincte */
+    .home-content h3 {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Style pour le reste du texte */
+    .home-content p {
+        display: inline;
+    }
 }
 
 @media screen and (max-width: 552px) {
-
     .portfolio-container {
-        grid-template-columns: repeat(1, 1fr); /* 6 colonnes pour les très petits écrans */
+        grid-template-columns: repeat(1, 1fr);
     }
     .portfolio-container .portfolio-box {
-width: 80%;
-height: 82%;
-margin: auto;
+        width: 80%;
+        height: 82%;
+        margin: auto;
+    }
+	    /* Ajoutez le style pour "je suis" sur une ligne distincte */
+    .home-content h3 {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Style pour le reste du texte */
+    .home-content p {
+        display: inline;
     }
 }
